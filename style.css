@@ -17,17 +17,6 @@ body {
     /* animation: animatebg 1s linear infinite; */
 }
 
-/* @keyframes animatebg {
-    0% {
-        left: 100vw;
-    }
-
-    100% {
-        left: -10vw;
-    }
-} */
-
-
 
 h2 {
     color: #333;
@@ -73,12 +62,13 @@ p {
     }
 }
 
-.blink p{
+.blink p {
     font-size: 1.3rem;
     color: #333;
     text-transform: capitalize;
 
 }
+
 .ch {
     background-image: url(ch.gif);
     background-repeat: no-repeat;
@@ -135,16 +125,6 @@ a {
     color: aliceblue;
 }
 
-/* .btn {
-    padding: 10px;
-    border: 1px solid rgb(221, 66, 66);
-    background-color: rgb(210, 64, 64);
-    font-size: 1rem;
-    border-radius: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-} */
-
 #scoreCont {
     position: absolute;
     top: 20px;
@@ -153,6 +133,9 @@ a {
     padding: 5px;
     text-transform: capitalize;
 }
+
+
+/* animations */
 
 @keyframes OVER {
     50% {

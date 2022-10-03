@@ -2,8 +2,9 @@
 score = 0;
 cross = true;
 
-// self.location = "file:///C:/Users/Nandini/OneDrive/Documents/Asper/Game%20Development/index.html";
 
+
+//audio
 audio = new Audio('gameover.mp3');
 audiogo = new Audio('smash.mp3');
 setTimeout(() => {
@@ -20,16 +21,16 @@ document.onkeydown = function (e) {
             var playPromise = audio.play();
 
             if (playPromise !== undefined) {
-              playPromise.then(_ => {
-                // Automatic playback started!
-                // Show playing UI.
-              })
-              .catch(error => {
-                // Auto-play was prevented
-                // Show paused UI.
-              });
+                playPromise.then(_ => {
+                    // Automatic playback started!
+                    // Show playing UI.
+                })
+                    .catch(error => {
+                        // Auto-play was prevented
+                        // Show paused UI.
+                    });
             }
-          
+
         }, 700);
     }
     if (e.keyCode == 39) {
@@ -44,6 +45,8 @@ document.onkeydown = function (e) {
         ch.style.left = (chX - 112) + "px";
     }
 }
+
+// functionality
 setInterval(() => {
     ch = document.querySelector('.ch');
     blink = document.querySelector(".blink");
@@ -61,20 +64,20 @@ setInterval(() => {
     if (offsetX < 73 && offsetY < 52) {
         blink.style.visibility = 'visible';
         // blink.innerHTML = 'Game Over';
-        corona.classList.remove('animateCorona') 
-        ch.classList.remove('animateCh') 
-          audiogo.play();
+        corona.classList.remove('animateCorona')
+        ch.classList.remove('animateCh')
+        audiogo.play();
         setTimeout(() => {
             audiogo.pause();
-        
+
         }, 1000);
 
-       
-        
+
+
     }
 
     else if (offsetX < 145 && cross) {
-        score+=1;
+        score += 1;
         updateScore(score);
         cross = false;
         setTimeout(() => {
@@ -92,11 +95,6 @@ setInterval(() => {
 function updateScore(score) {
     scoreCont.innerHTML = "your score : " + score;
 }
-
-
-// function newDoc() {
-//     window.location.assign("https://www.w3schools.com")
-//   }
 
 
 
